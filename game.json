@@ -9,6 +9,14 @@
         "map": "QUIT"
       },
       {
+        "v": "SLEEP",
+        "map": "SLEEP"
+      },
+      {
+        "v": "TURNAROUND",
+        "map": "TURNAROUND"
+      },
+      {
         "v": "NORTH",
         "map": "NORTH"
       },
@@ -39,41 +47,192 @@
       {
         "v": "W",
         "map": "WEST"
+      },
+      {
+        "v": "HOME",
+        "map": "HOME"
       }
+      
     ],
     "rooms": {
       "START": {
-        "name": "Starting place",
-        "desc": "This is the place to start!",
+        "name": "Starting",
+        "desc": "You wake up. A long road lies before you. You can't see an end to it.",
         "exits": [
+      
+          
           {
             "verb": "NORTH",
-            "target": "LOC2",
+            "target": "Road1",
             "condition": ""
-          },
+          }
+          
+          
+        ],
+        "inventory": []
+      },
+      "Road1": {
+        "name": "Road1",
+        "desc": "The road continues...",
+        "exits": [
+
           {
-            "verb": "SOUTH",
-            "target": "LOC32",
-            "condition": ""
-          },
-          {
-            "verb": "WEST",
-            "target": "LOC2",
-            "condition": ""
-          },
-          {
-            "verb": "EAST",
-            "target": "LOC2",
+            "verb": "NORTH",
+            "target": "Road2",
             "condition": ""
           }
         ],
         "inventory": []
       },
-      "LOC2": {
-        "name": "Location 2",
-        "desc": "Here is the second location.",
+      "Road2": {
+        "name": "Road2",
+        "desc": "The road continues... you can see an opening in the forest to the east.",
         "exits": [
+
+          {
+            "verb": "NORTH",
+            "target": "Road3",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "A white house",
+            "condition": ""
+          }
         ],
+        "inventory": []
+
+
+      },
+      "Road3":{
+        "name": "Road3",
+        "desc": "The road continues... you hear footsteps in the forest to the west...",
+        "exits": [
+ 
+          {
+            "verb": "NORTH",
+            "target": "Road4",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "A grey house",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "Road4":{
+        "name": "A dead end",
+        "desc": "The road ends here, but something seems familiar about it. You can only turn around...",
+        "exits": [
+
+          {
+            "verb": "TURNAROUND",
+            "target": "START",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "A white house":{
+        "name": "A white house",
+        "desc": "You walk through the opening in the trees. A small, white house stands before you. \n You enter the house and hear laughing coming from one of the rooms.",
+        "exits": [
+          {
+            "verb": "WEST",
+            "target": "Whiteleftroom",
+            "condition": ""
+          },
+
+          {
+            "verb": "EAST",
+            "target": "Whiterightroom",
+            "condition": ""
+          }
+          
+        ],
+        "inventory": []
+      },
+      "A grey house":{
+        "name": "A grey house",
+        "desc": "You can't find who was making the sound, but you find a large clearing. A grey house stands before you. \n Entering the house, you see a short hallway in front of you, and some stairs to the right.",
+        "exits": [
+          {
+            "verb": "EAST",
+            "target": "Upstairs",
+            "condition": ""
+          },
+
+          {
+            "verb": "NORTH",
+            "target": "LivingRoom",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "Whiteleftroom":{
+        "name": "The left room",
+        "desc": "The room is all yellow, with a single, foggy mirror with an 'h' written on it. Looking in the mirror as the fog clears away, you see yourself. \n You then see dark figure run across the hallway on all fours. You see that it noticed you, and you close the door before it comes back. \n It's banging on the door. It won't stop. Maybe if you go to sleep it will stop...",
+        "exits": [
+          {
+            "verb": "SLEEP",
+            "target": "START",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "Whiterightroom":{
+        "name": "The right room",
+        "desc": "Inside the room are two beds. Two children are on the ground playing with various toys. \n They look up at you, and one of them says 'You shouldn't have come back'. You peel your eyes away from them as the door slams shut. \n You look back, and the room is empty and completely decrepit. A large 'O' is cut into the wooden floor. You hear constant, echoing laughter. \n Maybe if you go to sleep it will stop...",
+        "exits": [
+        {
+          "verb": "SLEEP",
+            "target": "START",
+            "condition": ""
+        }
+        ],
+        
+        "inventory": []
+      },
+      "LivingRoom":{
+        "name": "The living room",
+        "desc": "As you go down the short hallway, you see a tv mounted over a fireplace, and the only thing displayed on it is the letter 'M'. \n you then notice a dark figure watching you from outside the window of the living room. \n You try to go back out the door, but the same figure watches you from the door's window. \n No matter where you go in the house, it keep watching you. \n Maybe if you go to sleep it will stop...",
+        "exits": [
+        {
+          "verb": "SLEEP",
+            "target": "START",
+            "condition": ""
+        }
+        ],
+        
+        "inventory": []
+      },
+      "Upstairs":{
+        "name": "Upstairs",
+        "desc": "Walking up the stairs, you see all the rooms up there are boarded up, except the one right in front of you. A piece of paper lies on the ground. It reads 'Why do you come back? Are you truly trapped here, or is it by choice?'. \n On the other side of the paper, the letter 'E' is written on it. \n You hear something coming up the stairs, and you hide in the closet. Whatever it is, it is waiting on the other side of the door. It just stands there. \n Maybe if you go to sleep it will stop...",
+        "exits": [
+        {
+          "verb": "SLEEP",
+            "target": "START",
+            "condition": ""
+          
+        }
+        ],
+        
+        "inventory": []
+      },
+      "Awake":{
+        "name": "Awake",
+        "desc": "You awaken.",
+        "exits": [
+        {
+
+        }
+        ],
+        
         "inventory": []
       }
     }
