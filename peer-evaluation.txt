@@ -1,0 +1,38 @@
+Name:Charlie White  
+Date: 9/28
+Project: Text Adventure
+Peer's repository: https://github.com/Tempestlyn/03-Text-adventure
+
+
+
+What is something you learned by reviewing your peer's project? I learned a way of tracking inventory in a text based game.
+
+ 
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects? I liked the introduction where the user can choose what game to play. 
+
+ 
+
+What suggestions would you have for your peer to improve his/her code? It all appears to be fine.
+
+ 
+
+What could have been clearer or better commented? There aren't many comments towards the end of the code, so more could be added there to explain what is happening there.
+
+ 
+
+Was there anything in the code that was confusing to you? If so, what? It all made sense to me.
+
+ 
+
+Does the repository contain an appropriate LICENSE? Yes.
+
+ 
+
+What is something he/she could add to the README.md to make it more descriptive? More instructions, like how to go north, could have been included.
+
+ 
+
+Pay a compliment to your peer based on the quality of his/her code.
+
+I like how you tracked the players moves and points throughout the duration of the game. 
